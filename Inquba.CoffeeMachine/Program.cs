@@ -11,6 +11,7 @@ namespace Inquba.CoffeeMachine
             // get from a db or some source
             var currentBeverages = new List<string> {"coffee", "cappuccino", "latte"};
             var userInput = string.Empty;
+            var coffeeMachineContext = new CoffeeMachineContext();
 
             while (userInput != "off")
             {

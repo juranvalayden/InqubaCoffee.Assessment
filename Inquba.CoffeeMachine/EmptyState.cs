@@ -1,12 +1,33 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Inquba.CoffeeMachine
+﻿namespace Inquba.CoffeeMachine
 {
     public class EmptyState : CoffeeMachineState
     {
+        public override void SwitchOn(CoffeeMachineContext coffeeMachineContext)
+        {
+        }
+
+        public override void SwitchOff(CoffeeMachineContext coffeeMachineContext)
+        {
+        }
+
+        public override void SelectBeverage(CoffeeMachineContext coffeeMachineContext)
+        {
+        }
+
+        public override void MakeBeverage(CoffeeMachineContext coffeeMachineContext)
+        {
+        }
+
+        public override void Refill(CoffeeMachineContext coffeeMachineContext)
+        {
+        }
+
+        public override void CompletedSuccessfully(CoffeeMachineContext coffeeMachineContext)
+        {
+        }
+
+        public override void CompletedUnsuccessfully(CoffeeMachineContext coffeeMachineContext)
+        {
+        }
     }
 }

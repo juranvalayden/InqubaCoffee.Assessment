@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Inquba.CoffeeMachine
+﻿namespace Inquba.CoffeeMachine
 {
     public class CoffeeMachineContext
     {
@@ -14,42 +12,42 @@ namespace Inquba.CoffeeMachine
         public void TransitionToState(CoffeeMachineState coffeeMachineState)
         {
             _currentState = coffeeMachineState;
-            _currentState.On(this);
+            _currentState.SwitchOn(this);
         }
 
-        public void ShowState(string stateName)
+        public void SwitchOn()
         {
-            Console.WriteLine(stateName);
+            _currentState.SwitchOn(this);
         }
 
-        public void On()
+        public void SwitchOff()
         {
-            _currentState.On(this);
+            _currentState.SwitchOff(this);
         }
 
-        public void BeverageReady()
+        public void SelectBeverage()
         {
-            _currentState.BeverageReady(this);
+            _currentState.SelectBeverage(this);
         }
 
-        public void InUse()
+        public void MakeBeverage()
         {
-            _currentState.InUse(this);
+            _currentState.SelectBeverage(this);
         }
 
-        public void Full()
+        public  void Refill()
         {
-            _currentState.Full(this);
+            _currentState.Refill(this);
         }
 
-        public void Empty()
+        public void CompletedSuccessfully()
         {
-            _currentState.Empty(this);
+            _currentState.CompletedSuccessfully(this);
         }
 
-        public void Off()
+        public void CompletedUnsuccessfully()
         {
-            _currentState.Off(this);
+            _currentState.CompletedUnsuccessfully(this);
         }
     }
 }
